@@ -147,9 +147,13 @@ footer em{display:block;margin-top:18px;font:italic 400 20px var(--serif);color:
 }
 @media(max-width:720px){
   .burger{display:flex}
-  .hero{padding-top:6px;padding-bottom:48px}
-  .hero .wrap{gap:8px}
-  .art{max-width:240px}
+  .hero{min-height:calc(100svh - 70px);display:flex;align-items:center;padding-top:6px;padding-bottom:28px}
+  .hero .wrap{width:100%;gap:12px}
+  .hero .label,.hero .tags{display:none}
+  .art{max-width:none;width:100%;aspect-ratio:600/480;overflow:visible}
+  .art .g-pod{transform:translate(100px,-135px) scale(1);stroke-width:1.4px}
+  .art .g-pack{transform:translate(20px,170px) scale(.85) translate(75px,100px) rotate(-5deg) translate(-75px,-100px);stroke-width:1.65px}
+  .art .g-bar{transform:translate(450px,140px) scale(1.5) translate(42px,85px) rotate(5deg) translate(-42px,-85px);stroke-width:.95px}
   h1{font-size:26px}
   .hero p{margin-top:12px;font-size:14px}
   .cta-row{margin-top:24px}
@@ -211,7 +215,7 @@ footer em{display:block;margin-top:18px;font:italic 400 20px var(--serif);color:
     <svg class="art" viewBox="0 0 600 320" role="img" aria-label="Line drawing of a Halle Chocolates pack with a bar sliding out, a cacao pod on its branch, and an unwrapped chocolate bar with scattered cacao beans">
       <circle class="ring" cx="300" cy="165" r="150"/>
       <g transform="translate(150 300) rotate(20)"><ellipse rx="7" ry="4.5" style="fill:var(--pod);fill-opacity:.35"/><path d="M-6 0Q0-3 6 0"/></g><g transform="translate(446 300) rotate(-30)"><ellipse rx="7" ry="4.5" style="fill:var(--pod);fill-opacity:.35"/><path d="M-6 0Q0-3 6 0"/></g><g transform="translate(150 26) rotate(-25)"><ellipse rx="7" ry="4.5" style="fill:var(--pod);fill-opacity:.35"/><path d="M-6 0Q0-3 6 0"/></g><g transform="translate(450 30) rotate(40)"><ellipse rx="7" ry="4.5" style="fill:var(--pod);fill-opacity:.35"/><path d="M-6 0Q0-3 6 0"/></g><g transform="translate(300 308) rotate(10)"><ellipse rx="7" ry="4.5" style="fill:var(--pod);fill-opacity:.35"/><path d="M-6 0Q0-3 6 0"/></g>
-      <g transform="translate(14 78) scale(.8) rotate(-5 75 100)" stroke-width="1.75">
+      <g class="g-pack" transform="translate(14 78) scale(.8) rotate(-5 75 100)" stroke-width="1.75">
         <path class="fill" d="M30 14V-70H110V14Z"/>
         <path class="pathd" pathLength="1" d="M30 14V-70H110V14"/>
         <path class="pathd" pathLength="1" d="M56.7 -70V14M83.3 -70V14M30 -35H110M30 0H110"/>
@@ -224,7 +228,7 @@ footer em{display:block;margin-top:18px;font:italic 400 20px var(--serif);color:
         <text x="65" y="82" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="15" fill="currentColor" stroke="none">Chocolates</text>
         <path class="pathd" pathLength="1" d="M34 126h62M42 138h46M36 188h58M44 200h42M54 242h22M92 238h8v8h-8Z"/>
       </g>
-      <g transform="translate(166.5 0) scale(.667)" stroke-width="2">
+      <g class="g-pod" transform="translate(166.5 0) scale(.667)" stroke-width="2">
         <path class="fill" d="M200 150C150 170 140 300 175 390 190 425 210 425 225 390 260 300 250 170 200 150Z"/>
         <path class="pathd" pathLength="1" d="M30 62C110 90 190 40 250 66S350 70 380 52"/>
         <path class="pathd" pathLength="1" d="M200 150C200 120 205 90 222 56"/>
@@ -234,7 +238,7 @@ footer em{display:block;margin-top:18px;font:italic 400 20px var(--serif);color:
         <path class="pathd" pathLength="1" d="M300 70C318 110 356 118 386 96 366 62 330 58 300 70ZM300 70C326 86 352 96 384 97"/>
         <path class="pathd" pathLength="1" d="M70 76C44 110 18 112 4 92 22 62 52 58 70 76ZM70 76C48 90 28 96 8 94"/>
       </g>
-      <g transform="translate(462 40) scale(1.5) rotate(5 42 85)" stroke-width=".95">
+      <g class="g-bar" transform="translate(462 40) scale(1.5) rotate(5 42 85)" stroke-width=".95">
         <path class="fill" d="M0 0H84V170H0Z"/>
         <path class="pathd" pathLength="1" d="M0 0H84V170H0ZM28 0V170M56 0V170M0 34H84M0 68H84M0 102H84M0 136H84"/>
         <path class="pathd" pathLength="1" d="M4 4h20v26h-20zM32 4h20v26h-20zM60 4h20v26h-20zM4 38h20v26h-20zM32 38h20v26h-20zM60 38h20v26h-20zM4 72h20v26h-20zM32 72h20v26h-20zM60 72h20v26h-20zM4 106h20v26h-20zM32 106h20v26h-20zM60 106h20v26h-20zM4 140h20v26h-20zM32 140h20v26h-20zM60 140h20v26h-20z"/>
