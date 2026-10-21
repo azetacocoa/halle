@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Range — Compound &amp; Couverture | Halle</title>
+<meta name="description" content="Halle compound and couverture chocolate — single origin, tree-to-bar, made in Pollachi, Tamil Nadu.">
+<meta name="theme-color" content="#0F0805">
+<link rel="preload" as="image" href="halle-bg.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F0805;--bg2:#1A0F09;--bg3:#25160F;--ink:#F2E6D3;--muted:#B9A48E;--gold:#D4A15A;--copper:#E08A5E;--forest:#1D3A2C;--line:rgba(242,230,211,.16);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:var(--sans);font-size:15px;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+svg{display:block;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec{padding:clamp(36px,5vw,64px) clamp(20px,5vw,56px)}
+.dark{background:#090503}
+.sage{background:var(--bg2)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+h2{font-size:clamp(26px,3.2vw,38px);max-width:22ch}
+.label{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);margin-bottom:10px;font-weight:500}
+.label svg{width:18px;height:18px}
+.lead{max-width:58ch;margin-top:12px;color:var(--muted);font-size:14.5px}
+.btn{display:inline-block;padding:12px 28px;background:var(--gold);color:#1A0F09;font:500 14px var(--sans);border:1px solid var(--gold);border-radius:999px;cursor:pointer;text-decoration:none;transition:background .25s,color .25s}
+.btn:hover{background:transparent;color:var(--gold)}
+.link{font-size:14px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(15,8,5,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;padding:10px clamp(20px,5vw,56px);max-width:1180px;margin:0 auto}
+.logo{font:500 26px var(--serif);text-decoration:none;display:flex;align-items:center;gap:8px;color:var(--gold)}
+.logo svg{width:16px;height:24px}
+.menu{display:flex;gap:28px;list-style:none}
+.menu a{font-size:14px;text-decoration:none;opacity:.8}
+.menu a:hover{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;color:var(--gold)}
+.burger svg{width:26px;height:26px;margin:auto}
+
+/* hero (photo background) */
+.hero2{position:relative;min-height:calc(100svh - 62px);display:flex;align-items:center;padding:48px clamp(20px,4vw,48px);background:#0F0805 url(halle-bg.jpg) 72% center/cover no-repeat;overflow:hidden}
+.hero2::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,8,5,.92) 0%,rgba(15,8,5,.62) 40%,rgba(15,8,5,0) 70%)}
+.hero2 .wrap{position:relative;width:100%;max-width:none;margin:0}
+.hero2 .copy{max-width:440px;text-align:left}
+.hero2 .label{color:var(--gold);font-size:13px;margin-bottom:12px}
+.hero2 h1{font-size:clamp(26px,3.2vw,44px);line-height:1.1;color:var(--ink)}
+.hero2 p{margin:14px 0 0;max-width:42ch;font-size:14px;line-height:1.6;color:#D8C7B0}
+.hero2 .cta-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.hero2 .link{color:var(--ink)}
+
+/* story */
+.sec.story{padding-top:20px}
+.story .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,56px);align-items:center}
+.story p{color:var(--muted);margin-top:12px;max-width:60ch}
+.stats{display:flex;gap:clamp(20px,4vw,40px);margin-top:22px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stat b{display:block;font:400 clamp(30px,3.6vw,42px)/1 var(--serif);color:var(--gold)}
+.stat span{font-size:13px;color:var(--muted)}
+.frame{border:1px solid var(--gold);border-radius:160px 160px 12px 12px;padding:30px 22px 20px;text-align:center;background:var(--bg3);color:var(--gold)}
+.frame .pic{width:100%;max-width:220px;margin:0 auto}
+.frame q{display:block;font:italic 400 19px/1.3 var(--serif);margin:14px 0 10px;quotes:none;color:var(--ink)}
+.frame small{display:block;font-size:12.5px;color:var(--muted)}
+.frame small b{display:block;color:var(--ink);font-weight:500}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 16px 18px}
+.step svg{width:28px;height:28px;color:var(--gold);margin-bottom:10px}
+.step h3{font-size:20px}
+.step h3 i{font:500 12px var(--sans);font-style:normal;color:var(--gold);margin-right:8px}
+.step p{margin-top:6px;font-size:13px;color:var(--muted)}
+
+/* range (home) */
+.range{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.rbox{display:flex;flex-direction:column;background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color .25s,transform .25s}
+.rbox:hover{border-color:var(--gold);transform:translateY(-3px)}
+.rbox svg{width:30px;height:30px;color:var(--gold)}
+.rbox small{font-size:12.5px;color:var(--copper);margin-top:12px;font-weight:500}
+.rbox h3{font-size:26px;margin-top:2px}
+.rbox p{color:var(--muted);font-size:13px;margin-top:6px;max-width:42ch}
+.rbox span{margin-top:14px;color:var(--gold);font-size:13px;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:1px}
+
+/* products (second page) */
+.group>h3{font-size:24px;display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.group>h3::after{content:'';flex:1;height:1px;background:var(--line)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card svg{width:26px;height:26px;color:var(--gold)}
+.card .t{font-size:12.5px;color:var(--copper);margin-top:12px;font-weight:500}
+.card h4{font:400 21px/1.15 var(--serif);margin-top:2px}
+.card .s{font-size:13px;color:var(--muted);margin-top:6px}
+.card .p{font:400 26px/1 var(--serif);margin:14px 0 12px}
+.card .p span{font-size:16px;margin-right:2px;color:var(--muted)}
+.card .u{border-top:1px dashed var(--line);padding-top:10px;font-size:13px;margin-top:auto;color:var(--muted)}
+.card .u b{display:block;font-weight:500;color:var(--gold)}
+
+/* farming (green) */
+#farming{background:var(--forest)}
+.farm{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:22px;align-items:start}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat{background:rgba(0,0,0,.2);border:1px solid rgba(242,230,211,.16);border-radius:12px;padding:16px}
+.feat svg{width:28px;height:28px;color:var(--gold)}
+.feat h3{font-size:19px;margin-top:8px}
+.feat p{font-size:13px;color:#C9BBA6;margin-top:4px}
+.loc{background:rgba(0,0,0,.25);border:1px solid rgba(242,230,211,.16);border-radius:12px;overflow:hidden}
+.loc .hills{color:var(--gold);width:100%;padding:14px 16px 0}
+.loc div.b{padding:8px 18px 18px}
+.loc small{font-size:12.5px;color:var(--gold)}
+.loc h3{font-size:24px;margin:2px 0 6px}
+.loc p{font-size:13px;color:#C9BBA6}
+.note{margin-top:12px;padding:12px 16px;border:1px dashed var(--gold);border-radius:12px;font-size:13px;color:#C9BBA6}
+.note b{display:block;color:var(--gold);font-weight:500;margin-bottom:2px}
+
+/* cta + footer */
+.cta{text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(9,5,3,.84),rgba(9,5,3,.9)),url(halle-bg.jpg) 70% center/cover}
+.cta .wrap{position:relative;z-index:1}
+.cta h2{margin:0 auto;max-width:20ch}
+.cta .lead{margin-left:auto;margin-right:auto}
+.cta .btn{margin-top:20px}
+.cta .deco{position:absolute;width:120px;color:var(--gold);opacity:.3;z-index:0}
+.cta .d1{left:4%;top:-8px;transform:rotate(-14deg)}
+.cta .d2{right:4%;bottom:-8px;transform:rotate(18deg)}
+footer{background:#070302;color:var(--muted);padding:28px clamp(20px,5vw,56px);text-align:center;font-size:13px;border-top:1px solid var(--line)}
+footer .f{font:500 26px var(--serif);color:var(--gold)}
+footer p{margin-top:6px}
+footer em{display:block;margin-top:10px;font:italic 400 16px var(--serif);color:var(--ink)}
+
+/* responsive */
+@media(max-width:960px){
+  .story .wrap,.farm{grid-template-columns:1fr}
+  .frame{max-width:340px;margin:0 auto}
+}
+@media(max-width:720px){
+  .burger{display:flex}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu.open{max-height:320px}
+  .menu a{display:block;padding:12px clamp(20px,5vw,56px);font-size:16px}
+  .hero2{align-items:flex-end;padding:0 20px 28px;background-position:70% 10%}
+  .hero2::before{background:linear-gradient(180deg,rgba(15,8,5,.05) 0%,rgba(15,8,5,.3) 35%,rgba(15,8,5,.96) 74%)}
+  .hero2 .label{font-size:12px;margin-bottom:8px}
+  .hero2 h1{font-size:22px}
+  .hero2 p{font-size:13px;margin-top:8px}
+  .hero2 .cta-row{margin-top:16px}
+  .steps{gap:8px}
+  .step{padding:12px}
+  .step svg{width:24px;height:24px;margin-bottom:6px}
+  .step h3{font-size:17px}
+  .step p{font-size:12px}
+  .range{gap:8px}
+  .rbox{padding:14px 12px}
+  .rbox svg{width:24px;height:24px}
+  .rbox small{font-size:11px;margin-top:8px}
+  .rbox h3{font-size:21px}
+  .rbox p{font-size:12px}
+  .rbox span{font-size:12px;margin-top:10px}
+  .cards{gap:8px}
+  .card{padding:10px}
+  .card svg{display:none}
+  .card .t{font-size:10px;margin-top:0}
+  .card h4{font-size:15px}
+  .card .s{font-size:10.5px;margin-top:4px}
+  .card .p{font-size:19px;margin:8px 0}
+  .card .p span{font-size:12px}
+  .card .u{font-size:10px;padding-top:6px}
+  .feats{gap:8px}
+  .feat{padding:12px}
+  .feat svg{width:24px;height:24px}
+  .feat h3{font-size:16px}
+  .feat p{font-size:12px}
+  .cta .deco{width:80px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn,.rbox{transition:none}}
+
+/* products page */
+.phead{background:linear-gradient(rgba(9,5,3,.82),rgba(9,5,3,.92)),url(halle-bg.jpg) 70% center/cover}
+.phead h1{font-size:clamp(28px,3.8vw,44px)}
+.phead .back{display:inline-block;margin-bottom:16px;color:var(--muted)}
+.pp .group{margin-top:0}
+</style>
+</head>
+<body>
+
+<!-- line-art sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pod" viewBox="0 0 100 200"><path d="M50 0V30M50 30C14 48 8 130 34 175 42 190 58 190 66 175 92 130 86 48 50 30Z"/><path d="M50 30C42 90 42 150 50 186M50 30C26 90 28 150 40 182M50 30C74 90 72 150 60 182"/></symbol>
+  <symbol id="leaf" viewBox="0 0 120 60"><path d="M4 30C30 2 90 2 116 30 90 58 30 58 4 30ZM4 30H116M40 30 55 15M40 30 55 45M70 30 85 15M70 30 85 45"/></symbol>
+  <symbol id="bean" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="10" ry="16" transform="rotate(30 24 24)"/><path d="M16 14C26 20 22 30 32 34"/></symbol>
+  <symbol id="flame" viewBox="0 0 48 48"><path d="M24 5C28 14 38 18 36 31 35 39 29 43 24 43 18 43 12 39 12 31 12 24 18 22 18 15 21 17 22 12 24 5Z"/></symbol>
+  <symbol id="wind" viewBox="0 0 48 48"><path d="M6 18H28a5 5 0 1 0-5-5M6 26H36a5 5 0 1 1-5 5M6 34H20"/></symbol>
+  <symbol id="gear" viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/></symbol>
+  <symbol id="thermo" viewBox="0 0 48 48"><path d="M20 28V10a4 4 0 0 1 8 0v18a8 8 0 1 1-8 0ZM24 20v14"/></symbol>
+  <symbol id="box" viewBox="0 0 48 48"><path d="M6 16 24 7l18 9v18l-18 9-18-9ZM6 16l18 9 18-9M24 25v18"/></symbol>
+  <symbol id="sprout" viewBox="0 0 48 48"><path d="M24 42V22M24 22C24 12 16 8 8 9c0 9 6 13 16 13ZM24 28c0-8 7-12 16-11 0 8-6 12-16 11Z"/></symbol>
+  <symbol id="branch" viewBox="0 0 48 48"><path d="M8 40C16 24 28 14 40 8M18 30c-6-1-9-5-9-9 5 0 9 2 9 9ZM26 22c-1-6 2-10 7-11 1 5-2 9-7 11Z"/></symbol>
+  <symbol id="drop" viewBox="0 0 48 48"><path d="M24 6C32 18 38 24 38 31a14 14 0 0 1-28 0c0-7 6-13 14-25Z"/></symbol>
+  <symbol id="sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></symbol>
+  <symbol id="bar" viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M18 10v28M30 10v28M6 24h36"/></symbol>
+</svg>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html"><svg><use href="#pod"/></svg>Halle®</a>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 28 28"><path d="M4 8h20M4 14h20M4 20h20"/></svg></button>
+    <ul class="menu">
+      <li><a href="index.html#story">Our Story</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      
+      <li><a href="index.html#farming">Farming</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="sec phead">
+  <div class="wrap">
+    <a class="link back" href="index.html#products">← Back to home</a><br>
+    <div class="label"><svg><use href="#bar"/></svg>Our range</div>
+    <h1>Compound &amp; couverture</h1>
+    <p class="lead">Professional-grade chocolates for every application — from everyday confectionery to premium artisan creations. All crafted from single origin Pollachi cacao.</p>
+  </div>
+</header>
+
+<section class="sec pp" id="compound">
+  <div class="wrap">
+    <div class="group"><h3>Compound</h3>
+      <div class="cards">
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Premium Dark Compound</h4><div class="s">500g Bar · 18% Cocoa · Medium Viscosity</div><div class="p"><span>₹</span>180</div><div class="u"><b>Best for</b>Ganache, Molding, Dipping, Shaving</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Ivory White Compound</h4><div class="s">500g Bar · High Fluidity · Quick Melting</div><div class="p"><span>₹</span>220</div><div class="u"><b>Best for</b>Drip Cakes, Coloring, Intricate Drizzles, Mousse</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Classic Milk Compound</h4><div class="s">500g Bar · Milky Flavor · Versatile</div><div class="p"><span>₹</span>200</div><div class="u"><b>Best for</b>Pralines, Dipping, Fillings</div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sage pp" id="couverture">
+  <div class="wrap">
+    <div class="group"><h3>Couverture</h3>
+      <div class="cards">
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 46%</h4><div class="s">500g Bar · 46% Min. Cocoa Solids</div><div class="p"><span>₹</span>550</div><div class="u"><b>Best for</b>Coating, Molding, Ganache, Baking, Decorative Work</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 55%</h4><div class="s">500g Bar · 55% Min. Cocoa Solids</div><div class="p"><span>₹</span>600</div><div class="u"><b>Best for</b>Ganache, Baking, Coatings</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 71%</h4><div class="s">500g Bar · 71% Min. Cocoa Solids</div><div class="p"><span>₹</span>700</div><div class="u"><b>Best for</b>Premium Desserts, Truffles, Deep Chocolate Flavour</div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f">Halle®</div>
+  <p>Pollachi, Tamil Nadu, India<br>Single Origin · Tree to Bar · Est. by Vibhu Nishanth</p>
+  <em>"True flavour is created at the source."</em>
+</footer>
+
+<script>
+  const b=document.querySelector('.burger'),m=document.querySelector('.menu');
+  b.addEventListener('click',()=>b.setAttribute('aria-expanded',m.classList.toggle('open')));
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>

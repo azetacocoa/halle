@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halle — Tree to Bar Chocolate</title>
+<meta name="description" content="Halle is a single origin, tree-to-bar chocolate brand from Pollachi, Tamil Nadu. Compound and couverture for chocolatiers, pastry chefs and distributors.">
+<meta name="theme-color" content="#0F0805">
+<link rel="preload" as="image" href="/halle-bg.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F0805;--bg2:#1A0F09;--bg3:#25160F;--ink:#F2E6D3;--muted:#B9A48E;--gold:#D4A15A;--copper:#E08A5E;--line:rgba(242,230,211,.16);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+svg{display:block;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec{padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)}
+.dark{background:#090503}
+.sage{background:var(--bg2)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
+h2{font-size:clamp(34px,4.6vw,58px);max-width:16ch}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--gold);margin-bottom:18px;font-weight:500}
+.label svg{width:22px;height:22px}
+.lead{max-width:56ch;margin-top:20px;color:var(--muted);font-size:17px}
+.btn{display:inline-block;padding:14px 34px;background:var(--gold);color:#1A0F09;font:500 15px var(--sans);border:1px solid var(--gold);border-radius:999px;cursor:pointer;text-decoration:none;transition:background .25s,color .25s}
+.btn:hover{background:transparent;color:var(--gold)}
+.link{font-size:15px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(15,8,5,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;padding:14px clamp(20px,5vw,56px);max-width:1180px;margin:0 auto}
+.logo{font:500 30px var(--serif);text-decoration:none;display:flex;align-items:center;gap:8px;color:var(--gold)}
+.logo svg{width:20px;height:28px}
+.menu{display:flex;gap:32px;list-style:none}
+.menu a{font-size:15px;text-decoration:none;opacity:.8}
+.menu a:hover{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;color:var(--gold)}
+.burger svg{width:28px;height:28px;margin:auto}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 70px);display:flex;align-items:center;padding:60px clamp(20px,5vw,56px);background:#0F0805 url(halle-bg.jpg) 72% center/cover no-repeat;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,8,5,.92) 0%,rgba(15,8,5,.62) 40%,rgba(15,8,5,0) 70%)}
+.hero .wrap{position:relative;width:100%}
+.hero .copy{max-width:540px}
+h1{font-size:clamp(40px,5.4vw,78px);letter-spacing:-.01em}
+.hero p{margin-top:22px;max-width:46ch;font-size:17px;color:#D8C7B0}
+.cta-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:34px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.tags span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:5px 14px;background:rgba(15,8,5,.55)}
+
+/* strip */
+.strip{background:var(--bg3);border-block:1px solid var(--line);padding:16px clamp(20px,5vw,56px)}
+.strip ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 36px;font-size:15px;color:var(--muted)}
+.strip li::before{content:'';display:inline-block;width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);margin-right:12px;vertical-align:1px}
+
+/* story */
+.story .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center}
+.story p{color:var(--muted);margin-top:18px;max-width:58ch}
+.stats{display:flex;gap:clamp(24px,4vw,56px);margin-top:36px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stat b{display:block;font:400 clamp(44px,5vw,64px)/1 var(--serif);color:var(--gold)}
+.stat span{font-size:14px;color:var(--muted)}
+.frame{border:1px solid var(--gold);border-radius:200px 200px 12px 12px;padding:44px 28px 28px;text-align:center;background:var(--bg3);color:var(--gold)}
+.frame .pic{width:100%;max-width:300px;margin:0 auto}
+.frame q{display:block;font:italic 400 24px/1.3 var(--serif);margin:20px 0 14px;quotes:none;color:var(--ink)}
+.frame small{display:block;font-size:14px;color:var(--muted)}
+.frame small b{display:block;color:var(--ink);font-weight:500}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(24px,4vw,56px);margin-top:48px}
+.step{border-top:1px solid var(--line);padding:28px 0 36px}
+.step svg{width:44px;height:44px;color:var(--gold);margin-bottom:16px}
+.step h3{font-size:30px}
+.step h3 i{font:500 14px var(--sans);font-style:normal;color:var(--gold);margin-right:10px}
+.step p{margin-top:10px;font-size:15.5px;color:var(--muted);max-width:42ch}
+
+/* products */
+.group{margin-top:56px}
+.group>h3{font-size:34px;display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.group>h3::after{content:'';flex:1;height:1px;background:var(--line)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--bg3);border:1px solid var(--line);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card svg{width:34px;height:34px;color:var(--gold)}
+.card .t{font-size:14px;color:var(--copper);margin-top:18px;font-weight:500}
+.card h4{font:400 28px/1.15 var(--serif);margin-top:4px}
+.card .s{font-size:14.5px;color:var(--muted);margin-top:8px}
+.card .p{font:400 36px/1 var(--serif);margin:20px 0 16px}
+.card .p span{font-size:20px;margin-right:2px;color:var(--muted)}
+.card .u{border-top:1px dashed var(--line);padding-top:14px;font-size:14.5px;margin-top:auto;color:var(--muted)}
+.card .u b{display:block;font-weight:500;color:var(--gold)}
+
+/* fermentation */
+.ferm{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:48px}
+.fs{position:relative;padding-top:8px}
+.fs svg{width:56px;height:56px;color:var(--gold);padding:12px;border:1px solid var(--gold);border-radius:50%;background:var(--bg)}
+.fs h3{font-size:30px;margin-top:20px}
+.fs p{margin-top:10px;font-size:15.5px;color:var(--muted)}
+.ferm .fs::before{content:'';position:absolute;top:36px;left:64px;right:-24px;border-top:1px dashed var(--gold);opacity:.4}
+.ferm .fs:last-child::before{display:none}
+
+/* farming */
+.farm{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,64px);margin-top:48px;align-items:start}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:32px 36px}
+.feat svg{width:40px;height:40px;color:var(--gold)}
+.feat h3{font-size:26px;margin-top:12px}
+.feat p{font-size:15.5px;color:var(--muted);margin-top:6px}
+.loc{background:var(--bg3);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.loc .hills{color:var(--gold);width:100%;padding:24px 24px 0}
+.loc div.b{padding:12px 28px 28px}
+.loc small{font-size:14px;color:var(--gold)}
+.loc h3{font-size:34px;margin:4px 0 10px}
+.loc p{font-size:15px;color:var(--muted)}
+.note{margin-top:16px;padding:20px 24px;border:1px dashed var(--gold);border-radius:14px;font-size:15px;color:var(--muted)}
+.note b{display:block;color:var(--gold);font-weight:500;margin-bottom:4px}
+
+/* cta + footer */
+.cta{text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(9,5,3,.84),rgba(9,5,3,.9)),url(halle-bg.jpg) 70% center/cover}
+.cta .wrap{position:relative;z-index:1}
+.cta h2{margin:0 auto;max-width:18ch}
+.cta .lead{margin-left:auto;margin-right:auto}
+.cta .btn{margin-top:32px}
+.cta .deco{position:absolute;width:170px;color:var(--gold);opacity:.3;z-index:0}
+.cta .d1{left:4%;top:-10px;transform:rotate(-14deg)}
+.cta .d2{right:4%;bottom:-10px;transform:rotate(18deg)}
+footer{background:#070302;color:var(--muted);padding:48px clamp(20px,5vw,56px);text-align:center;font-size:14.5px;border-top:1px solid var(--line)}
+footer .f{font:500 34px var(--serif);color:var(--gold)}
+footer p{margin-top:10px}
+footer em{display:block;margin-top:18px;font:italic 400 20px var(--serif);color:var(--ink)}
+
+/* responsive */
+@media(max-width:960px){
+  .story .wrap,.farm{grid-template-columns:1fr}
+  .steps,.cards,.ferm{grid-template-columns:1fr 1fr}
+  .ferm .fs::before{display:none}
+  .frame{max-width:420px;margin:0 auto}
+}
+@media(max-width:720px){
+  .burger{display:flex}
+  .hero{align-items:flex-end;padding:0 20px 36px;background-position:70% 10%}
+  .hero::before{background:linear-gradient(180deg,rgba(15,8,5,.05) 0%,rgba(15,8,5,.3) 35%,rgba(15,8,5,.96) 74%)}
+  .hero .label,.hero .tags{display:none}
+  h1{font-size:30px}
+  .hero p{margin-top:12px;font-size:14.5px}
+  .cta-row{margin-top:22px}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu.open{max-height:320px}
+  .menu a{display:block;padding:14px clamp(20px,5vw,56px);font-size:17px}
+  .steps,.cards,.ferm,.feats{grid-template-columns:1fr}
+  .cta .deco{width:110px}
+  .strip ul{gap:8px 24px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- line-art sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pod" viewBox="0 0 100 200"><path d="M50 0V30M50 30C14 48 8 130 34 175 42 190 58 190 66 175 92 130 86 48 50 30Z"/><path d="M50 30C42 90 42 150 50 186M50 30C26 90 28 150 40 182M50 30C74 90 72 150 60 182"/></symbol>
+  <symbol id="leaf" viewBox="0 0 120 60"><path d="M4 30C30 2 90 2 116 30 90 58 30 58 4 30ZM4 30H116M40 30 55 15M40 30 55 45M70 30 85 15M70 30 85 45"/></symbol>
+  <symbol id="bean" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="10" ry="16" transform="rotate(30 24 24)"/><path d="M16 14C26 20 22 30 32 34"/></symbol>
+  <symbol id="flame" viewBox="0 0 48 48"><path d="M24 5C28 14 38 18 36 31 35 39 29 43 24 43 18 43 12 39 12 31 12 24 18 22 18 15 21 17 22 12 24 5Z"/></symbol>
+  <symbol id="wind" viewBox="0 0 48 48"><path d="M6 18H28a5 5 0 1 0-5-5M6 26H36a5 5 0 1 1-5 5M6 34H20"/></symbol>
+  <symbol id="gear" viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/></symbol>
+  <symbol id="thermo" viewBox="0 0 48 48"><path d="M20 28V10a4 4 0 0 1 8 0v18a8 8 0 1 1-8 0ZM24 20v14"/></symbol>
+  <symbol id="box" viewBox="0 0 48 48"><path d="M6 16 24 7l18 9v18l-18 9-18-9ZM6 16l18 9 18-9M24 25v18"/></symbol>
+  <symbol id="sprout" viewBox="0 0 48 48"><path d="M24 42V22M24 22C24 12 16 8 8 9c0 9 6 13 16 13ZM24 28c0-8 7-12 16-11 0 8-6 12-16 11Z"/></symbol>
+  <symbol id="branch" viewBox="0 0 48 48"><path d="M8 40C16 24 28 14 40 8M18 30c-6-1-9-5-9-9 5 0 9 2 9 9ZM26 22c-1-6 2-10 7-11 1 5-2 9-7 11Z"/></symbol>
+  <symbol id="drop" viewBox="0 0 48 48"><path d="M24 6C32 18 38 24 38 31a14 14 0 0 1-28 0c0-7 6-13 14-25Z"/></symbol>
+  <symbol id="sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></symbol>
+  <symbol id="bar" viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M18 10v28M30 10v28M6 24h36"/></symbol>
+</svg>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#top"><svg><use href="#pod"/></svg>Halle®</a>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 28 28"><path d="M4 8h20M4 14h20M4 20h20"/></svg></button>
+    <ul class="menu">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#farming">Farming</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="copy">
+      <div class="label"><svg><use href="#sprout"/></svg>Single origin, Pollachi, Tamil Nadu</div>
+      <h1>Where cacao becomes craft</h1>
+      <p>From the foothills of Anamalai to professional kitchens worldwide — Halle delivers tree-to-bar chocolate built on traceability, precision, and uncommon depth of flavour.</p>
+      <div class="cta-row">
+        <a class="btn" href="#products">Explore Products</a>
+        <a class="link" href="#story">Our Story</a>
+      </div>
+      <div class="tags"><span>Pesticide-free farming</span><span>6-day teakwood fermentation</span></div>
+    </div>
+    </div>
+</header>
+
+<div class="strip"><ul>
+  <li>Single Origin Cacao</li><li>Pollachi, Tamil Nadu</li><li>Teakwood Fermentation</li><li>Pesticide Free</li><li>Tree to Bar</li><li>Export Quality</li><li>Compound &amp; Couverture</li>
+</ul></div>
+
+<section class="sec story" id="story">
+  <div class="wrap">
+    <div>
+      <div class="label"><svg><use href="#leaf"/></svg>Our story</div>
+      <h2>Born in the cacao fields of Pollachi</h2>
+      <p>Halle is a tree-to-bar chocolate brand founded by Vibhu Nishanth, a chemical engineer turned chocolate craftsman. Inspired by his family's cacao plantation nestled in the Anamalai region, Vibhu built a brand that controls chocolate from its very origin.</p>
+      <p>Science meets heritage at Halle. By combining traditional wooden box fermentation with modern production systems and strict process control, every batch delivers depth, consistency, and professional-grade reliability.</p>
+      <p>Crafted for chocolatiers, pastry chefs, and professionals worldwide who seek more than commodity cocoa — Halle represents a refined, origin-driven alternative.</p>
+      <div class="stats">
+        <div class="stat"><b>100%</b><span>Single origin</span></div>
+        <div class="stat"><b>6</b><span>Day fermentation</span></div>
+        <div class="stat"><b>0</b><span>Pesticides used</span></div>
+      </div>
+    </div>
+    <figure class="frame">
+      <svg class="pic" viewBox="0 0 300 220" aria-hidden="true">
+        <use href="#pod" x="40" y="10" width="50" height="100"/><use href="#pod" x="125" y="30" width="60" height="120"/><use href="#pod" x="215" y="10" width="45" height="90"/>
+        <use href="#leaf" x="0" y="150" width="110" height="55" transform="rotate(-12 55 175)"/><use href="#leaf" x="190" y="150" width="110" height="55" transform="rotate(12 245 175)"/>
+        <path d="M20 205C90 190 210 190 280 205"/>
+      </svg>
+      <q>True flavour is created long before it reaches the factory.</q>
+      <small><b>Cacao Plantation</b>Anamalai Tiger Reserve Region, Pollachi</small>
+    </figure>
+  </div>
+</section>
+
+<section class="sec dark" id="process">
+  <div class="wrap">
+    <div class="label"><svg><use href="#bean"/></svg>Tree to bar</div>
+    <h2>Our six-step process</h2>
+    <div class="steps">
+      <div class="step"><svg><use href="#bean"/></svg><h3><i>01</i>Sorting</h3><p>Beans are hand-sorted and visually inspected. Mouldy or under-fermented beans are removed before processing begins.</p></div>
+      <div class="step"><svg><use href="#flame"/></svg><h3><i>02</i>Roasting</h3><p>Gentle roasting unlocks aromatic potential, deepens flavour, reduces bitterness, and develops characteristic cocoa notes.</p></div>
+      <div class="step"><svg><use href="#wind"/></svg><h3><i>03</i>Winnowing</h3><p>Roasted beans are cracked and husks removed through winnowing, leaving clean cacao nibs — the pure essence of cacao.</p></div>
+      <div class="step"><svg><use href="#gear"/></svg><h3><i>04</i>Grinding</h3><p>Nibs are ground into smooth cocoa liquor. Conching develops velvety texture while mellowing unwanted acidity.</p></div>
+      <div class="step"><svg><use href="#thermo"/></svg><h3><i>05</i>Tempering</h3><p>Precise temperature control stabilizes cocoa butter crystals, resulting in a glossy finish, clean snap, and stable structure.</p></div>
+      <div class="step"><svg><use href="#box"/></svg><h3><i>06</i>Packaging</h3><p>Moulded, carefully cooled, and hygienically packaged — ready for professional use or global export.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sage" id="products">
+  <div class="wrap">
+    <div class="label"><svg><use href="#bar"/></svg>Our range</div>
+    <h2>Compound &amp; couverture</h2>
+    <p class="lead">Professional-grade chocolates for every application — from everyday confectionery to premium artisan creations. All crafted from single origin Pollachi cacao.</p>
+
+    <div class="group"><h3>Compound</h3>
+      <div class="cards">
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Premium Dark Compound</h4><div class="s">500g Bar · 18% Cocoa · Medium Viscosity</div><div class="p"><span>₹</span>180</div><div class="u"><b>Best for</b>Ganache, Molding, Dipping, Shaving</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Ivory White Compound</h4><div class="s">500g Bar · High Fluidity · Quick Melting</div><div class="p"><span>₹</span>220</div><div class="u"><b>Best for</b>Drip Cakes, Coloring, Intricate Drizzles, Mousse</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Compound</div><h4>Classic Milk Compound</h4><div class="s">500g Bar · Milky Flavor · Versatile</div><div class="p"><span>₹</span>200</div><div class="u"><b>Best for</b>Pralines, Dipping, Fillings</div></article>
+      </div>
+    </div>
+
+    <div class="group"><h3>Couverture</h3>
+      <div class="cards">
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 46%</h4><div class="s">500g Bar · 46% Min. Cocoa Solids</div><div class="p"><span>₹</span>550</div><div class="u"><b>Best for</b>Coating, Molding, Ganache, Baking, Decorative Work</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 55%</h4><div class="s">500g Bar · 55% Min. Cocoa Solids</div><div class="p"><span>₹</span>600</div><div class="u"><b>Best for</b>Ganache, Baking, Coatings</div></article>
+        <article class="card"><svg><use href="#bar"/></svg><div class="t">Couverture · Dark</div><h4>Dark Couverture 71%</h4><div class="s">500g Bar · 71% Min. Cocoa Solids</div><div class="p"><span>₹</span>700</div><div class="u"><b>Best for</b>Premium Desserts, Truffles, Deep Chocolate Flavour</div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="label"><svg><use href="#box"/></svg>Fermentation</div>
+    <h2>Where flavour begins</h2>
+    <div class="ferm">
+      <div class="fs"><svg><use href="#sprout"/></svg><h3>Harvest</h3><p>Mature cacao pods are carefully hand-harvested to ensure optimal ripeness. Fresh beans are extracted on-site and prepared immediately, preserving their natural integrity and setting the foundation for consistent processing.</p></div>
+      <div class="fs"><svg><use href="#box"/></svg><h3>Fermentation</h3><p>Beans are fermented in traditional teakwood boxes for approximately six days. Native yeasts initiate the process, allowing natural acids and heat to develop gradually — unlocking complex flavour precursors. Each batch is monitored daily.</p></div>
+      <div class="fs"><svg><use href="#sun"/></svg><h3>Sun drying</h3><p>Following fermentation, beans are sun-dried under controlled conditions in Pollachi's warm climate. This gradual moisture reduction stabilizes flavour, prevents mould development, and preserves aromatic compounds.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sage" id="farming">
+  <div class="wrap">
+    <div class="label"><svg><use href="#branch"/></svg>Sustainable farming</div>
+    <h2>Grown with purpose</h2>
+    <div class="farm">
+      <div class="feats">
+        <div class="feat"><svg><use href="#sprout"/></svg><h3>Pesticide-free</h3><p>Our farming system follows pesticide-free agricultural practices, producing cacao with character and care.</p></div>
+        <div class="feat"><svg><use href="#branch"/></svg><h3>Biodiversity</h3><p>Multi-crop cultivation including coconut, areca nut, and pepper promotes ecosystem health alongside cacao.</p></div>
+        <div class="feat"><svg><use href="#drop"/></svg><h3>Water-smart</h3><p>Controlled drip irrigation manages water use responsibly, minimizing waste throughout the growing season.</p></div>
+        <div class="feat"><svg><use href="#sun"/></svg><h3>Natural drying</h3><p>Pods are harvested manually and sun-dried under natural conditions — ensuring traceability and environmental harmony.</p></div>
+      </div>
+      <aside>
+        <div class="loc">
+          <svg class="hills" viewBox="0 0 400 130" aria-hidden="true"><circle cx="300" cy="40" r="16"/><path d="M0 120 70 60 120 95 200 30 270 90 330 65 400 120M0 120H400M60 120V104M90 120V108M130 120V100M330 120V106M360 120V110"/></svg>
+          <div class="b"><small>Our origin</small><h3>Pollachi, Tamil Nadu</h3><p>Nestled near the Anamalai Tiger Reserve, our plantations benefit from rich biodiversity, seasonal rains, and generations of farming knowledge.</p></div>
+        </div>
+        <div class="note"><b>Anamalai Tiger Reserve</b>We partner with local growers to preserve biodiversity, respect soil and season, and improve farmer livelihoods — producing cacao that carries the spirit of its origin.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark cta" id="contact">
+  <svg class="deco d1" viewBox="0 0 100 200" aria-hidden="true"><use href="#pod"/></svg>
+  <svg class="deco d2" viewBox="0 0 120 60" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="wrap">
+    <div class="label"><svg><use href="#box"/></svg>For professionals &amp; global buyers</div>
+    <h2>Ready for origin-driven chocolate?</h2>
+    <p class="lead">Whether you're a chocolatier, pastry chef, or distributor — Halle offers craft integrity with industrial reliability. Get in touch for bulk inquiries and export pricing.</p>
+    <button class="btn alt">Request a Sample</button>
+  </div>
+</section>
+
+<footer>
+  <div class="f">Halle®</div>
+  <p>Pollachi, Tamil Nadu, India<br>Single Origin · Tree to Bar · Est. by Vibhu Nishanth</p>
+  <em>"True flavour is created at the source."</em>
+</footer>
+
+<script>
+  const b=document.querySelector('.burger'),m=document.querySelector('.menu');
+  b.addEventListener('click',()=>b.setAttribute('aria-expanded',m.classList.toggle('open')));
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>
